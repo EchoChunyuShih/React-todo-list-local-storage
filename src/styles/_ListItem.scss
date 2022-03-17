@@ -25,23 +25,3 @@
 .single-item-transition {
   opacity: 0;
 }
-.alert-btns {
-  @include sm-btn-style;
-  background-color: $color-light;
-  padding: 0.3rem;
-}
-.alert-confirm {
-  margin-right: 1rem;
-  &:hover {
-    border: 2px solid $color-green;
-    background-color: $color-green;
-    color: white;
-  }
-}
-.alert-cancel {
-  &:hover {
-    border: 2px solid $color-red;
-    background-color: $color-red;
-    color: white;
-  }
-}
