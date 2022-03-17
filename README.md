@@ -1,8 +1,10 @@
 <h1 align="center"> React Todo-List with Local Storage
 </h1>
+
 <p align="center">
-  <a href="https://codesandbox.io/s/todo-list-tec60v?file=/src/App.js">Demo</a>  
+  <a href="https://codesandbox.io/s/todo-list-tec60v?file=/src/App.js"><img alt="codesandbox" src="https://img.shields.io/badge/open%20in%20CodeSandbox-000000?style=for-the-badge&logo=codesandbox&logoColor=white"></a>  
 </p>
+
 <div align="center">
 <img alt="react" src="https://img.shields.io/badge/React-000?&logo=react"/>  
   <img alt="npm" src="https://img.shields.io/badge/NPM-blue?logo=npm"/>
