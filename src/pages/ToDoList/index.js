@@ -47,7 +47,7 @@ const ToDoList = () => {
     <>
       <div className="main-container">
         <div className="content-wrapper">
-          <h1 className="heading">代辦事項</h1>
+          <h1 className="heading">待辦事項</h1>
           <AddItemInput onAdd={onAdd} />
         </div>
         <FilterBar
