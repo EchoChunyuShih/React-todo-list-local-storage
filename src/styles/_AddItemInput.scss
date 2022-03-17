@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
-  .input-subtitle {
+  &_subtitle {
     color: $color-red;
     text-align: start;
     padding-left: 0.5rem;
@@ -11,7 +11,7 @@
       color: $color-dark;
     }
   }
-  .input-group {
+  &_input-group {
     margin: 0.5rem auto 0;
     display: flex;
     justify-content: space-between;
@@ -30,7 +30,6 @@
       padding: 0.7rem;
       width: 21rem;
       background-color: $color-light;
-
       cursor: not-allowed;
     }
     .btn-submit {
@@ -51,7 +50,7 @@
       padding: 0.4rem;
     }
   }
-  .err-msg {
+  &_err-msg {
     text-align: start;
     color: $color-red;
     padding-left: 0.5rem;

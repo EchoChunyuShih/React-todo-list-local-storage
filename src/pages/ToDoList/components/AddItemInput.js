@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { TailSpin } from "react-loader-spinner";
+
 const AddTaskInput = ({ onAdd }) => {
   const [title, setTitle] = useState("");
   const [errMsg, setErrMsg] = useState("");
@@ -25,10 +26,10 @@ const AddTaskInput = ({ onAdd }) => {
   return (
     <>
       <form className="add-form" onSubmit={onSubmit}>
-        <span className="input-subtitle">
+        <span className="add-form_subtitle">
           *<span>項目</span>
         </span>
-        <div className="input-group">
+        <div className="add-form_input-group">
           <input
             value={title}
             name="title"
@@ -60,7 +61,7 @@ const AddTaskInput = ({ onAdd }) => {
             />
           )}
         </div>
-        <span className="err-msg">{errMsg}</span>
+        <span className="add-form_err-msg">{errMsg}</span>
       </form>
     </>
   );

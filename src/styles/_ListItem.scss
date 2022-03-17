@@ -14,14 +14,11 @@
     color: $color-light;
   }
 
-  .control-btns {
-    .control-btn {
+  .action-bar {
+    &_btn {
       @include sm-btn-style;
       background-color: $color-light;
       margin-left: 1rem;
     }
   }
-}
-.single-item-transition {
-  opacity: 0;
 }

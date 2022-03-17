@@ -14,7 +14,9 @@ const FilterBar = (props) => {
       <div className="filter-section">
         <input
           className={
-            filterActive === 0 ? "btn-filter filter-active" : "btn-filter"
+            filterActive === 0
+              ? "filter-section_btn filter-section_active"
+              : "filter-section_btn"
           }
           type="submit"
           value="待完成"
@@ -22,7 +24,9 @@ const FilterBar = (props) => {
         />
         <input
           className={
-            filterActive === 1 ? "btn-filter filter-active" : "btn-filter"
+            filterActive === 1
+              ? "filter-section_btn filter-section_active"
+              : "filter-section_btn"
           }
           type="submit"
           value="已完成"

@@ -82,9 +82,9 @@ const ListItem = (props) => {
         </div>
         {item.finished === false ? (
           <>
-            <div className="control-btns">
+            <div className="action-bar">
               <input
-                className="btn control-btn"
+                className="action-bar_btn"
                 type="button"
                 value="移除"
                 onClick={() => {
@@ -93,7 +93,7 @@ const ListItem = (props) => {
                 }}
               />
               <input
-                className="btn control-btn"
+                className="action-bar_btn"
                 type="submit"
                 value="完成"
                 onClick={() => {

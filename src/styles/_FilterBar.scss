@@ -1,0 +1,18 @@
+.filter-section {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  &_btn {
+    @include lg-btn-style;
+    width: 50%;
+    transition: 0.3s;
+    background-color: transparent;
+    &:nth-child(2) {
+      @include lg-btn-style;
+    }
+  }
+  &_active {
+    @include lg-btn-style;
+    background-color: $color-light;
+  }
+}
