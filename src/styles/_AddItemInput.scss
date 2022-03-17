@@ -15,16 +15,22 @@
     margin: 0.5rem auto 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     .new-task-input {
       @include task-input;
     }
     .err-input {
       @include task-input;
-      border: 2px solid $color-red;
+      padding: 0.5rem;
+      width: 24rem;
+      border: 1px solid $color-red;
     }
     .disabled-input {
       @include task-input;
+      padding: 0.7rem;
+      width: 21rem;
       background-color: $color-light;
+
       cursor: not-allowed;
     }
     .btn-submit {
@@ -41,12 +47,14 @@
       justify-content: center;
       background-color: $color-light;
       height: fit-content;
-      width: 8rem;
+      width: 6rem;
+      padding: 0.4rem;
     }
   }
   .err-msg {
     text-align: start;
     color: $color-red;
     padding-left: 0.5rem;
+    font-size: small;
   }
 }
