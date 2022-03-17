@@ -21,7 +21,7 @@ const ListItem = (props) => {
       .fire({
         title: "提示",
         text: `是否要移除 "${item.title}"  `,
-        icon: "warning",
+        // icon: "warning",
         showCancelButton: true,
         confirmButtonText: "確認移除",
         cancelButtonText: "取消",
@@ -40,7 +40,7 @@ const ListItem = (props) => {
       .fire({
         title: "提示",
         text: `是否已完成 "${item.title}"  `,
-        icon: "warning",
+        // icon: "warning",
         showCancelButton: true,
         confirmButtonText: "確認完成",
         cancelButtonText: "取消",
