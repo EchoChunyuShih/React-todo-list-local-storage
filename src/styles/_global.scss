@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap");
+
+$font-family: "Noto serif TC", "PingFang TC", "Lantinghei TC",
+  "Microsoft JhengHei", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial,
+  sans-serif;
+
+$color-dark: black;
+$color-light: rgba(204, 204, 204, 0.795);
+$color-red: rgba(189, 12, 12, 0.753);
+$color-green: rgba(13, 94, 13, 0.705);
+
+@mixin sm-btn-style {
+  padding: 0.2rem;
+  border: 1px solid $color-light;
+  height: fit-content;
+  border-radius: 0;
+}
+@mixin lg-btn-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border: 1px solid $color-light;
+  height: fit-content;
+  border-radius: 0;
+}
+@mixin task-input {
+  padding: 0.5rem;
+  margin-right: 1rem;
+  height: fit-content;
+  width: 69%;
+  border: 1px solid $color-light;
+  border-radius: 0;
+  color: $color-dark;
+}
+#root {
+  font-family: $font-family;
+}

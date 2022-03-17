@@ -1,0 +1,52 @@
+.add-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  .input-subtitle {
+    color: $color-red;
+    text-align: start;
+    padding-left: 0.5rem;
+    span {
+      margin-left: 0.5rem;
+      color: $color-dark;
+    }
+  }
+  .input-group {
+    margin: 0.5rem auto 0;
+    display: flex;
+    justify-content: space-between;
+    .new-task-input {
+      @include task-input;
+    }
+    .err-input {
+      @include task-input;
+      border: 2px solid $color-red;
+    }
+    .disabled-input {
+      @include task-input;
+      background-color: $color-light;
+      cursor: not-allowed;
+    }
+    .btn-submit {
+      @include lg-btn-style;
+      background-color: $color-light;
+      height: fit-content;
+      width: 25%;
+    }
+    .disabled-btn {
+      @include lg-btn-style;
+      cursor: not-allowed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $color-light;
+      height: fit-content;
+      width: 8rem;
+    }
+  }
+  .err-msg {
+    text-align: start;
+    color: $color-red;
+    padding-left: 0.5rem;
+  }
+}

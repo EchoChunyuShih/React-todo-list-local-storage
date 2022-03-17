@@ -1,0 +1,39 @@
+.filter-section {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  .btn-filter {
+    @include lg-btn-style;
+    width: 50%;
+    transition: 0.3s;
+    background-color: transparent;
+    &:nth-child(2) {
+      @include lg-btn-style;
+    }
+  }
+  .filter-active {
+    @include lg-btn-style;
+    background-color: $color-light;
+  }
+}
+.filter-result-transition {
+  opacity: 0;
+  .info-transition {
+    padding: 3rem;
+    font-size: large;
+    text-align: center;
+    opacity: 0;
+  }
+}
+
+.filter-result {
+  opacity: 1;
+  transition: all 0.2s ease-in;
+  .info {
+    opacity: 1;
+    padding: 3rem;
+    font-size: large;
+    text-align: center;
+    transition: all 0.2s ease-in;
+  }
+}

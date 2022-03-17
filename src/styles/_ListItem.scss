@@ -1,0 +1,47 @@
+.single-item {
+  opacity: 1;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid $color-light;
+  transition: all 0.2s ease-in;
+  &_title {
+    text-align: start;
+    padding: 0.3rem;
+  }
+  &_title-grey {
+    color: $color-light;
+  }
+
+  .control-btns {
+    .control-btn {
+      @include sm-btn-style;
+      background-color: $color-light;
+      margin-left: 1rem;
+    }
+  }
+}
+.single-item-transition {
+  opacity: 0;
+}
+.alert-btns {
+  @include sm-btn-style;
+  background-color: $color-light;
+  padding: 0.3rem;
+}
+.alert-confirm {
+  margin-right: 1rem;
+  &:hover {
+    border: 2px solid $color-green;
+    background-color: $color-green;
+    color: white;
+  }
+}
+.alert-cancel {
+  &:hover {
+    border: 2px solid $color-red;
+    background-color: $color-red;
+    color: white;
+  }
+}
