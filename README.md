@@ -37,7 +37,9 @@ npm start
 ```
 
 ## 🥳 Live Demo
-
+                                                                        
+<img alt="demo" src="https://media.giphy.com/media/emiyuB5eJnFnB72FON/giphy.gif">
+                                                                                
 ## 🛠 Packaged Used
 
 - [moment.js](https://momentjs.com/)
