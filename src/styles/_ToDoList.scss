@@ -10,5 +10,8 @@
   .content-wrapper {
     padding: 1.5rem;
     border: 1px solid $color-light;
+    .heading {
+      margin-top: 0.5rem;
+    }
   }
 }
