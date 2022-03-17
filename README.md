@@ -38,7 +38,7 @@ npm start
 
 ## 🥳 Live Demo
                                                                         
-<img alt="demo" src="https://media.giphy.com/media/emiyuB5eJnFnB72FON/giphy.gif">
+<img alt="demo" src="https://media.giphy.com/media/FZYm3TxO1k3A5t0a9v/giphy.gif">
                                                                                 
 ## 🛠 Packaged Used
 
