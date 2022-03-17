@@ -10,6 +10,7 @@ const ListItem = (props) => {
   const MySwal = withReactContent(Swal);
   const customSwal = MySwal.mixin({
     customClass: {
+      popup: "alert-modal-size",
       confirmButton: "alert-btns alert-confirm",
       cancelButton: "alert-btns alert-cancel",
     },
@@ -22,14 +23,13 @@ const ListItem = (props) => {
         text: `是否要移除 "${item.title}"  `,
         icon: "warning",
         showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
         confirmButtonText: "確認移除",
         cancelButtonText: "取消",
+        backdrop: "rgba(32,96,79,.5)",
       })
       .then((result) => {
         if (result.isConfirmed) {
-          customSwal.fire("移除成功", ` 已移除 "${item.title}"`, "success");
+          // customSwal.fire("移除成功", ` 已移除 "${item.title}"`, "success");
           // console.log(item.id);
           onDelete(item.id);
         }
@@ -42,14 +42,13 @@ const ListItem = (props) => {
         text: `是否已完成 "${item.title}"  `,
         icon: "warning",
         showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
         confirmButtonText: "確認完成",
         cancelButtonText: "取消",
+        backdrop: "rgba(32,96,79,.5)",
       })
       .then((result) => {
         if (result.isConfirmed) {
-          customSwal.fire("太好了！", ` 已完成 "${item.title}"`, "success");
+          // customSwal.fire("太好了！", ` 已完成 "${item.title}"`, "success");
           // console.log(item.id);
           onFinish(item.id);
         }
