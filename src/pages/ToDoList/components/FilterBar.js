@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import ListItem from "./ListItem";
 import ListItems from "./ListItems";
 
 const FilterBar = (props) => {
-  const { filterActive, setFilterActive, list, setList, onFilter } = props;
+  const { filterActive, setFilterActive } = props;
 
   const toggleFilter = (e) => {
     e.preventDefault();
