@@ -19,9 +19,9 @@
 1. Clone this Repo to your local enviromnent
 
 ```
-$git clone
+$ git clone
 
-$cd react-todoList-localStorage
+$ cd react-todoList-localStorage
 ```
 
 2. Install dependencies
