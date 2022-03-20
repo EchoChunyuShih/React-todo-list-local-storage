@@ -27,13 +27,13 @@ $ cd react-todoList-localStorage
 2. Install dependencies
 
 ```
-npm i
+$ npm i
 ```
 
 3. run the project
 
 ```
-npm start
+$ npm start
 ```
 
 ## 🥳 Live Demo
