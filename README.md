@@ -8,7 +8,7 @@
 <div align="center">
 <img alt="react" src="https://img.shields.io/badge/React-000?&logo=react"/>  
   <img alt="npm" src="https://img.shields.io/badge/NPM-blue?logo=npm"/>
-  <img alt=""sass" src="https://img.shields.io/badge/SASS-CC6699?&logo=Sass&logoColor=white">
+  <img alt="sass" src="https://img.shields.io/badge/SCSS-CC6699?&logo=Sass&logoColor=white">
 <img alt="styled prettier" src="https://img.shields.io/badge/styled%20with-Prettier-yellow"/>
 <img alt="echo" src="https://img.shields.io/badge/Made%20by-Echo-ff69b4"/>
 
@@ -19,25 +19,25 @@
 1. Clone this Repo to your local enviromnent
 
 ```
-$git clone
+$ git clone https://github.com/EchoChunyuShih/react-todo-list-local-storage.git
 
-$cd react-todoList-localStorage
+$ cd react-todo-list-local-storage
 ```
 
 2. Install dependencies
 
 ```
-npm i
+$ npm i
 ```
 
 3. run the project
 
 ```
-npm start
+$ npm start
 ```
 
 ## 🥳 Live Demo
-                                                                        
+
 <img alt="demo" src="https://media.giphy.com/media/FZYm3TxO1k3A5t0a9v/giphy.gif">
                                                                                 
 ## 🛠 Packaged Used
