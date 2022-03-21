@@ -1,12 +1,32 @@
 import React from "react";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
-
-const moment = require("moment");
-moment.locale("zh-tw");
+import TimeFilter from "./TimeFilter";
 
 const ListItem = (props) => {
   const { item, onDelete, onFinish, transition } = props;
+  const btnRemove = (
+    <input
+      className="action-bar_btn"
+      type="button"
+      value="移除"
+      onClick={() => {
+        deleteAlert();
+        // onDelete(item.id);
+      }}
+    />
+  );
+  const btnFinished = (
+    <input
+      className="action-bar_btn"
+      type="submit"
+      value="完成"
+      onClick={() => {
+        finishAlert();
+        // onFinish(item.id);
+      }}
+    />
+  );
   const MySwal = withReactContent(Swal);
   const customSwal = MySwal.mixin({
     customClass: {
@@ -54,21 +74,7 @@ const ListItem = (props) => {
         }
       });
   };
-  const diff = Math.floor((Date.now() - item.finished_At) / 1000);
-  let state = "";
-  const lessMinute = diff < 60;
-  const lessHours = diff < 60 * 60;
-  const lessDay = diff < 60 * 60 * 24;
-  if (lessMinute) {
-    state = diff + " 秒前";
-  } else if (lessHours) {
-    state = Math.floor(diff / 60) + " 分鐘前";
-  } else if (lessDay) {
-    state = Math.floor(diff / (60 * 60)) + " 小時前";
-  } else {
-    // state = item.finished_At;
-    state = moment(item.finished_At * 1000).format("YYYY-MM-DD");
-  }
+
   return (
     <>
       <div className={transition ? "single-item-transition" : "single-item"}>
@@ -83,24 +89,8 @@ const ListItem = (props) => {
         {item.finished === false ? (
           <>
             <div className="action-bar">
-              <input
-                className="action-bar_btn"
-                type="button"
-                value="移除"
-                onClick={() => {
-                  deleteAlert();
-                  // onDelete(item.id);
-                }}
-              />
-              <input
-                className="action-bar_btn"
-                type="submit"
-                value="完成"
-                onClick={() => {
-                  finishAlert();
-                  // onFinish(item.id);
-                }}
-              />
+              {btnRemove}
+              {btnFinished}
             </div>
           </>
         ) : (
@@ -111,7 +101,7 @@ const ListItem = (props) => {
                 "single-item_title  single-item_title-grey"
               }
             >
-              {state}
+              <TimeFilter item={item} />
             </span>
           </>
         )}

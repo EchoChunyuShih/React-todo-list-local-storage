@@ -16,6 +16,7 @@ const ToDoList = () => {
       : setDiaplayList([...list].filter((v) => v.finished === true));
   }, [list, filterActive]);
   // console.log("dis", diaplayList);
+  const title = "待辦事項";
   const onAdd = (e) => {
     let updatedList = [...list, e];
     localStorage.setItem("todo-list", JSON.stringify(updatedList));
@@ -47,7 +48,7 @@ const ToDoList = () => {
     <>
       <div className="main-container">
         <div className="content-wrapper">
-          <h1 className="heading">待辦事項</h1>
+          <h1 className="heading">{title}</h1>
           <AddItemInput onAdd={onAdd} />
         </div>
         <FilterBar
