@@ -18,6 +18,9 @@
     align-items: center;
     .new-task-input {
       @include task-input;
+      &:focus {
+        outline: 1px solid transparent;
+      }
     }
     .err-input {
       @include task-input;

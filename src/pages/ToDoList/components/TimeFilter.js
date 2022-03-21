@@ -16,7 +16,7 @@ const TimeFilter = ({ item }) => {
     state = Math.floor(diff / (60 * 60)) + " 小時前";
   } else {
     // state = item.finished_At;
-    state = moment(item.finished_At * 1000).format("YYYY-MM-DD");
+    state = moment(item.finished_At).format("YYYY-MM-DD");
   }
   return <div>{state}</div>;
 };
