@@ -18,7 +18,7 @@ const ToDoList = () => {
   // console.log("dis", diaplayList);
   const title = "待辦事項";
   const onAdd = (e) => {
-    let updatedList = [...list, e];
+    let updatedList = [e, ...list];
     localStorage.setItem("todo-list", JSON.stringify(updatedList));
     setList(updatedList);
   };
