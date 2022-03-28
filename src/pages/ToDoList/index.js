@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import AddItemInput from "./components/AddItemInput";
 import FilterBar from "./components/FilterBar";
 import ListItems from "./components/ListItems";
