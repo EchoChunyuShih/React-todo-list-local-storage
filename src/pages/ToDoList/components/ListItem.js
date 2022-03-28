@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import TimeFilter from "./TimeFilter";
-import AlertWindow from "./shared/AlertWindow";
-import AlertBtn from "./shared/AlertBtn";
+import AlertWindow from "../../../components/shared/AlertWindow";
+import AlertBtn from "../../../components/shared/AlertBtn";
 import TodoContext from "../../../context/TodoContext";
 
 const ListItem = ({ item }) => {
