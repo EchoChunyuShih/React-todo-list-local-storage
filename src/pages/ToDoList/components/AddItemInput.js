@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { TailSpin } from "react-loader-spinner";
+import { useContext } from "react";
+import TodoContext from "../../../context/TodoContext";
 
-const AddTaskInput = ({ onAdd }) => {
+const AddTaskInput = () => {
+  const { onAdd } = useContext(TodoContext);
   const [title, setTitle] = useState("");
   const [errMsg, setErrMsg] = useState("");
   const [finished, setFinished] = useState(false);

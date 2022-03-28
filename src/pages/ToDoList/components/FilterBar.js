@@ -1,9 +1,9 @@
 import React from "react";
-import ListItem from "./ListItem";
-import ListItems from "./ListItems";
+import { useContext } from "react";
+import TodoContext from "../../../context/TodoContext";
 
 const FilterBar = (props) => {
-  const { filterActive, setFilterActive } = props;
+  const { filterActive, setFilterActive } = useContext(TodoContext);
   const toggleFilter = (e) => {
     e.preventDefault();
     setFilterActive(filterActive === 0 ? 1 : 0);

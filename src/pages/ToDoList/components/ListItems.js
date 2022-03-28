@@ -1,15 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
+import TodoContext from "../../../context/TodoContext";
 import ListItem from "./ListItem";
 
-const ListItems = (props) => {
-  const {
-    diaplayList,
-    onDelete,
-    onFinish,
-    transition,
-    setTransition,
-    filterActive,
-  } = props;
+const ListItems = () => {
+  const { diaplayList, transition, setTransition, filterActive } =
+    useContext(TodoContext);
   useEffect(() => {
     setTransition(true);
     setTimeout(() => {
@@ -30,15 +25,7 @@ const ListItems = (props) => {
           {transition ? (
             <div className="transition"></div>
           ) : (
-            diaplayList.map((v) => (
-              <ListItem
-                key={v.id}
-                item={v}
-                onDelete={onDelete}
-                onFinish={onFinish}
-                transition={transition}
-              />
-            ))
+            diaplayList.map((v) => <ListItem key={v.id} item={v} />)
           )}
         </>
       )}
