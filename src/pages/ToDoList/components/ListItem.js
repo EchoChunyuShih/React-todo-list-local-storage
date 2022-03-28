@@ -1,82 +1,99 @@
-import React from "react";
-import Swal from "sweetalert2";
-import withReactContent from "sweetalert2-react-content";
+import React, { useContext, useState } from "react";
 import TimeFilter from "./TimeFilter";
+import AlertWindow from "./shared/AlertWindow";
+import AlertBtn from "./shared/AlertBtn";
+import TodoContext from "../../../context/TodoContext";
 
-const ListItem = (props) => {
-  const { item, onDelete, onFinish, transition } = props;
+const ListItem = ({ item }) => {
+  const { onDelete, onFinish, transition, alertOn, setAlertOn } =
+    useContext(TodoContext);
+  const [btnAction, setBtnAction] = useState(null);
   const btnRemove = (
     <input
       className="action-bar_btn"
       type="button"
       value="移除"
-      onClick={() => {
-        deleteAlert();
-        // onDelete(item.id);
+      onClick={(e) => {
+        setAlertOn(true);
+        setBtnAction(e.target.value);
       }}
     />
   );
+
   const btnFinished = (
     <input
       className="action-bar_btn"
       type="submit"
       value="完成"
-      onClick={() => {
-        finishAlert();
-        // onFinish(item.id);
+      onClick={(e) => {
+        setAlertOn(true);
+        setBtnAction(e.target.value);
       }}
     />
   );
-  const MySwal = withReactContent(Swal);
-  const customSwal = MySwal.mixin({
-    customClass: {
-      popup: "alert-modal-size",
-      confirmButton: "alert-btns alert-confirm",
-      cancelButton: "alert-btns alert-cancel",
-    },
-    buttonsStyling: false,
-  });
-  const deleteAlert = () => {
-    customSwal
-      .fire({
-        title: "提示",
-        text: `是否要移除 "${item.title}"  `,
-        // icon: "warning",
-        showCancelButton: true,
-        confirmButtonText: "確認移除",
-        cancelButtonText: "取消",
-        backdrop: "rgba(32,96,79,.5)",
-      })
-      .then((result) => {
-        if (result.isConfirmed) {
-          // customSwal.fire("移除成功", ` 已移除 "${item.title}"`, "success");
-          // console.log(item.id);
-          onDelete(item.id);
-        }
-      });
+
+  const DeleteAlert = () => {
+    return (
+      <AlertWindow
+        title="提醒"
+        subtitle={`確定要${btnAction} ${item.title} 嗎?`}
+      >
+        <div className="btn-group">
+          <AlertBtn
+            title="Confirm"
+            version="confirm"
+            onClick={(e) => {
+              onDelete(item.id);
+              setAlertOn(false);
+              setBtnAction(null);
+            }}
+          ></AlertBtn>
+          <AlertBtn
+            title="Cancel"
+            version="cancel"
+            onClick={(e) => {
+              setAlertOn(false);
+              setBtnAction(null);
+            }}
+          ></AlertBtn>
+        </div>
+      </AlertWindow>
+    );
   };
-  const finishAlert = () => {
-    customSwal
-      .fire({
-        title: "提示",
-        text: `是否已完成 "${item.title}"  `,
-        // icon: "warning",
-        showCancelButton: true,
-        confirmButtonText: "確認完成",
-        cancelButtonText: "取消",
-        backdrop: "rgba(32,96,79,.5)",
-      })
-      .then((result) => {
-        if (result.isConfirmed) {
-          // customSwal.fire("太好了！", ` 已完成 "${item.title}"`, "success");
-          // console.log(item.id);
-          onFinish(item.id);
-        }
-      });
+  console.log(`${item.id}`, btnAction);
+  const FinishAlert = () => {
+    return (
+      <AlertWindow
+        title="提醒"
+        subtitle={`您已經${btnAction} ${item.title} 了嗎?`}
+      >
+        <div className="btn-group">
+          <AlertBtn
+            title="Confirm"
+            version="confirm"
+            onClick={(e) => {
+              onFinish(item.id);
+              setAlertOn(false);
+              setBtnAction("");
+            }}
+          ></AlertBtn>
+          <AlertBtn
+            title="Cancel"
+            version="cancel"
+            onClick={(e) => {
+              setAlertOn(false);
+              setBtnAction("");
+            }}
+          ></AlertBtn>
+        </div>
+      </AlertWindow>
+    );
   };
 
   return (
     <>
+      {btnAction === "完成" && alertOn && <FinishAlert />}
+      {btnAction === "移除" && alertOn && <DeleteAlert />}
       <div className={transition ? "single-item-transition" : "single-item"}>
         <div
           className={
