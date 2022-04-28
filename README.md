@@ -18,6 +18,14 @@
 A to-do list built using React, storing data using local storage. Customized page transitions and alert using Vanilla
 JavaScript.
 
+## 🛠 Tools Used
+
+- [moment.js](https://momentjs.com/)
+- [sweetalert2](https://sweetalert2.github.io/)
+- [uuid](https://www.npmjs.com/package/uuid)
+- [react-loader-spinner](https://mhnpd.github.io/react-loader-spinner/)
+- [sass](https://www.npmjs.com/package/sass)
+
 ## ✨ USAGE
 
 1. Clone this Repo to your local enviromnent
@@ -44,10 +52,4 @@ $ npm start
 
 <img alt="demo" src="https://media.giphy.com/media/FZYm3TxO1k3A5t0a9v/giphy.gif">
                                                                                 
-## 🛠 Tools Used
 
-- [moment.js](https://momentjs.com/)
-- [sweetalert2](https://sweetalert2.github.io/)
-- [uuid](https://www.npmjs.com/package/uuid)
-- [react-loader-spinner](https://mhnpd.github.io/react-loader-spinner/)
-- [sass](https://www.npmjs.com/package/sass)
