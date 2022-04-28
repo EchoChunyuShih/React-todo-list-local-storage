@@ -14,6 +14,10 @@
 
 </div>
 
+## 📄 Description
+A to-do list built using React, storing data using local storage. Customized page transitions and alert using Vanilla
+JavaScript.
+
 ## ✨ USAGE
 
 1. Clone this Repo to your local enviromnent
