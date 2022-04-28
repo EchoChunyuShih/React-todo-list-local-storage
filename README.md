@@ -40,7 +40,7 @@ $ npm start
 
 <img alt="demo" src="https://media.giphy.com/media/FZYm3TxO1k3A5t0a9v/giphy.gif">
                                                                                 
-## 🛠 Packaged Used
+## 🛠 Tools Used
 
 - [moment.js](https://momentjs.com/)
 - [sweetalert2](https://sweetalert2.github.io/)
