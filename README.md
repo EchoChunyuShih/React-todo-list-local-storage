@@ -1,9 +1,7 @@
 <h1 align="center"> React Todo-List with Local Storage
 </h1>
 
-<p align="center">
-  <a href="https://codesandbox.io/s/todo-list-tec60v?file=/src/App.js"><img alt="codesandbox" src="https://img.shields.io/badge/open%20in%20CodeSandbox-000000?style=for-the-badge&logo=codesandbox&logoColor=white"></a>  
-</p>
+
 
 <div align="center">
 <img alt="react" src="https://img.shields.io/badge/React-v.17-000?&logo=react"/>  
@@ -49,6 +47,9 @@ $ npm start
 ```
 
 ## 🥳 Live Demo
+<p>
+  <a href="https://codesandbox.io/s/todo-list-tec60v?file=/src/App.js"><img alt="codesandbox" src="https://img.shields.io/badge/open%20in%20CodeSandbox-000000?style=for-the-badge&logo=codesandbox&logoColor=white"></a>  
+</p>
 
 <img alt="demo" src="https://media.giphy.com/media/FZYm3TxO1k3A5t0a9v/giphy.gif">
                                                                                 
